@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        html {
+  scroll-padding-top: 70px; /* Matches the height of your fixed nav */
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            transition: all 1s ease;
+            scrollbar-width: 0;
+
+        }
+
+        .nav {
+            background-color: white;
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+        }
+
+        .img {
+            height: 70px;
+            width: 100%;
+        }
+
+        .img img {
+            width: 60px;
+            height: auto;
+            align-items: center;
+            align-content: center;
+            border-radius: 50%;
+
+        }
+
+        .nav-items {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            align-items: center;
+
+        }
+
+        .nav-items a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.4s ease-in-out, color 0.4s ease-in-out;
+            gap: 40px;
+
+        }
+
+        .nav-items a:hover {
+            color: #0F817D;
+            border-bottom: 2px solid #0F817D;
+
+        }
+
+        #main {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            background-color: #F1F1F1;
+
+
+        }
+
+
+        .hero img {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin-top: 40px;
+            margin-right: -40px;
+            border: 1px solid whitesmoke;
+            left: 80%;
+            border-radius: 20px;
+            animation: slide 1s ease-in-out;
+        }
+
+        .text {
+            height: 150px;
+            position: relative;
+            text-align: center;
+            top: 30%;
+            z-index: 1;
+            line-height: 75px;
+            animation: slide 1s ease-in-out;
+            overflow: hidden;
+
+        }
+
+        .highlight {
+            color: #0F817D;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #about {
+            /* padding: 100px 20px; */
+            background-color: #fff;
+            text-align: center;
+            align-content: center;
+            height: 50vh;
+
+        }
+
+        #service h1 {
+            font-size: 32px;
+            color: #0F817D;
+            line-height: 100px;
+        }
+
+        .about-content p {
+            line-height: 40px;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #service {
+            background-color: #81B1AE;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .service-content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .it {
+            color: #EBEBEB;
+            text-align: justify;
+            line-height: 30px;
+
+
+        }
+
+        .it ul {
+            list-style-type: none;
+        }
+
+        .its {
+            position: relative;
+            bottom: 10px;
+            color: #EBEBEB;
+            text-align: justify;
+            line-height: 30px;
+
+
+        }
+
+        .its ul {
+            list-style-type: none;
+        }
+
+        .its img {
+            width: 30px;
+            height: auto;
+            position: relative;
+            top: 10px;
+
+        }
+
+        .carousel {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 50vh;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .btn:hover {
+            background: rgba(0, 0, 0, 0.7);
+
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .rooms h1 {
+            text-align: center;
+            color: #0F817D;
+            line-height: 100px;
+        }
+        #contact{
+            background-color: #78b8b6;
+            height: 50vh;
+            color: white;
+            align-content: center;
+            text-align: center;
+        }
+        #contact a{
+            line-height: 30px;
+            margin: 0 60px;
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="img">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/883/276/original/modern-graphic-apple-fruit-colorful-logo-good-for-technology-logo-fruits-logo-apple-logo-nutrition-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg"
+                alt="">
+        </div>
+        <div class="nav-items">
+            <a href="#main">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="text">
+            <h1>Welcome to GLL</h1>
+            <h1><span class="highlight">Safe.</span> Affordable. Hassle-Free PG Living.</h1>
+        </div>
+        <div class="hero">
+            <img src="img/IMG_5672.jpg" alt="">
+        </div>
+    </div>
+    <div id="about">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>
+                GLL PG offers a modern, safe, and comfortable living space tailored for students and working
+                professionals.
+                Located in a prime area with easy access to public transport, shopping, and dining, our PG ensures all
+                the
+                essentials are just around the corner.
+        </div>
+    </div>
+    <div id="service">
+        <h1>Our Services</h1>
+
+        <div class="service-content">
+            <div class="it">
+                <ul>
+                    <li><i class="fas fa-bed"></i> Fully Furnished Rooms</li>
+                    <li><i class="fas fa-wifi"></i> High-Speed Wi-Fi</li>
+                    <li><i class="fas fa-utensils"></i> Hygienic Meals</li>
+                    <li><i class="fas fa-shield-alt"></i> 24/7 Security</li>
+                </ul>
+            </div>
+            <div class="its">
+                <ul>
+                    <li><i class="fa-solid fa-shirt"></i> Laundry Service</li>
+                    <li><i class="fas fa-concierge-bell"></i> 24/7 Concierge Service</li>
+                    <li><i class="fas fa-broom"></i> Daily Housekeeping</li>
+                    <li><i class="fas fa-bicycle"></i> Bicycle Rentals</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="rooms">
+        <h1>Available Comforts</h1>
+        <div class="carousel">
+
+            <div class="carousel-track">
+                <img src="img/IMG_5680.jpg" alt="1">
+                <img src="img/IMG_5683.jpg" alt="2">
+                <img src="img/IMG_5685.jpg" alt="3">
+                <img src="img/IMG_5686.jpg" alt="">
+                <img src="img/IMG_6087.JPG" alt="">
+                <img src="img/IMG_6088.JPG" alt="">
+                <img src="img/IMG_6089.JPG" alt="">
+                <img src="img/IMG_6093.jpg" alt="2">
+                <img src="img/IMG_6092.jpg" alt="3">
+
+            </div>
+            <button class="btn prev">&#10094;</button>
+            <button class="btn next">&#10095;</button>
+        </div>
+
+    </div>
+   
+    <div id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+        <a href="https://wa.me/9353563797"><i class="fa-brands fa-whatsapp">WHATSAPP</i></a>
+
+        <a href="mailto:keerthikumar0103@gmail.com"><i class="fa-solid fa-envelope">GMAIL</i></a>
+
+        <a href="tel:+9353563797"><i class="fa-solid fa-phone">CALL</i></a>
+    </div>
+
+    <script>
+        const track = document.querySelector(".carousel-track");
+        const images = document.querySelectorAll(".carousel img");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+
+        let index = 0;
+        let autoPlay = true;
+        let interval;
+
+        function moveCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function startAutoPlay() {
+            interval = setInterval(() => {
+                index = (index + 1) % images.length;
+                moveCarousel();
+            }, 2500);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(interval);
+            autoPlay = false;
+        }
+
+        // Next/Prev button clicks
+        nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            moveCarousel();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            moveCarousel();
+        });
+
+        // Stop autoplay on image click
+        images.forEach(img => {
+            img.addEventListener("click", stopAutoPlay);
+        });
+
+        // Start autoplay
+        if (autoPlay) startAutoPlay();
+    </script>
+
+
+</body>
+
+
+</html>
