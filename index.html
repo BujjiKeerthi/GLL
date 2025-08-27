@@ -2,424 +2,458 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLL</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        html {
-            scroll-padding-top: 70px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLL PG</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+        scrollbar-width: 0px;
+        scroll-behavior:smooth;
+    }
+    html {
+      scroll-padding-top: 70px;
+      scroll-behavior: smooth;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
-            transition: all 0.4s ease;
-            scrollbar-width: 0;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      box-sizing: border-box;
+    }
 
-        /* Navbar */
-        .nav {
-            background-color: white;
-            backdrop-filter: blur(10px);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    body {
+      background: #f8f9fa;
+      color: #333;
+    }
 
-        .img img {
-            width: 50px;
-            height: auto;
-            border-radius: 50%;
-        }
+    /* Navbar */
+    .nav {
+      background-color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .nav-items {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    .img img {
+      width: 55px;
+      border-radius: 50%;
+    }
 
-        .nav-items a {
-            color: black;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-size: 1rem;
-            border-bottom: 2px solid transparent;
-        }
+    .nav-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-        .nav-items a:hover {
-            color: #0F817D;
-            border-bottom: 2px solid #0F817D;
-        }
+    .nav-items a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
 
-        /* Hero */
-        #main {
-            display: flex;
-            flex-wrap: wrap;
-            /* stack on small screens */
-            justify-content: center;
-            align-items: center;
-            min-height: 90vh;
-            padding: 20px;
-            background-color: #F1F1F1;
-        }
+    .nav-items a:hover {
+      color: #0F817D;
+    }
 
-        .hero img {
-            width: 90%;
-            max-width: 400px;
-            border-radius: 20px;
-        }
+    /* Hero */
+    #main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #e3fdfd, #ffffff);
+    }
 
-        .text {
-            flex: 1;
-            text-align: center;
-            padding: 20px;
-        }
+    .hero {
+      position: relative;
+      display: inline-block;
+    }
 
-        .text h1 {
-            font-size: 2rem;
-            line-height: 1.4;
-        }
+    .hero img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      /* border: 6px solid #0072ff; */
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
 
-        .highlight {
-            color: #0F817D;
-        }
+    /* Glow Animation */
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00c6ff, 0 0 50px #0072ff;
+      animation: glow 2s infinite alternate;
+      z-index: -1;
+    }
 
-        /* About */
-        #about {
-            padding: 50px 20px;
-            text-align: center;
-        }
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 20px #00c6ff, 0 0 40px #0072ff;
+      }
 
-        #about h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
+      to {
+        box-shadow: 0 0 40px #00c6ff, 0 0 80px #0072ff;
+      }
+    }
 
-        .about-content p {
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1rem;
-        }
+    .text {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+    }
 
-        /* Services */
-        #service {
-            background-color: #81B1AE;
-            text-align: center;
-            padding: 50px 20px;
-            color: white;
-        }
+    .text h1 {
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
 
-        #service h1 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
+    .highlight {
+      color: #0F817D;
+      font-weight: bold;
+    }
 
-        .service-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+    /* About */
+    #about {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
 
-        .it,
-        .its {
-            flex: 1 1 250px;
-            text-align: left;
-        }
+    #about h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0F817D;
+    }
 
-        .it ul,
-        .its ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+    .about-content p {
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
 
-        /* Carousel */
-        .rooms h1 {
-            text-align: center;
-            color: #0F817D;
-            margin: 50px 0 20px;
-        }
+    /* Services */
+    #service {
+      background-color: #0F817D;
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+    }
 
-        .carousel {
-            width: 95%;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            overflow: hidden;
-            border-radius: 12px;
-            position: relative;
-        }
+    #service h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
 
-        .carousel-track {
-            display: flex;
-            transition: transform 0.6s ease-in-out;
-        }
+    .service-content {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
 
-        .carousel img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
+    .service-card {
+      background: white;
+      color: #333;
+      padding: 25px;
+      border-radius: 15px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
 
-        .btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
+    .service-card i {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #0F817D;
+    }
 
-        .btn:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
 
-        .prev {
-            left: 10px;
-        }
+    /* Carousel */
+    .rooms {
+      padding: 60px 20px;
+    }
 
-        .next {
-            right: 10px;
-        }
+    .rooms h1 {
+      text-align: center;
+      color: #0F817D;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
 
-        /* Contact */
-        #contact {
-            background-color: #78b8b6;
-            padding: 40px 20px;
-            color: white;
-            text-align: center;
-        }
+    .carousel {
+      width: 95%;
+      max-width: 800px;
+      height: 30%;
+      margin: 0 auto 50px;
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+.carousel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
 
-        #contact a {
-            display: inline-block;
-            margin: 10px 20px;
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-        }
+    .carousel img {
+      width: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            .text h1 {
-                font-size: 1.5rem;
-            }
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
 
-            .nav-items {
-                gap: 10px;
-            }
+    .btn:hover {
+      background: rgba(0, 0, 0, 0.85);
+    }
 
-            .hero img {
-                max-width: 300px;
-            }
+    .prev {
+      left: 12px;
+    }
 
-            #service h1,
-            .rooms h1 {
-                font-size: 1.5rem;
-            }
-        }
+    .next {
+      right: 12px;
+    }
 
-        @media (max-width: 425px) {
-            .text h1 {
-                font-size: 1.2rem;
-            }
+    /* Contact */
+    #contact {
+      background: #0F817D;
+      padding: 60px 20px;
+      color: white;
+      text-align: center;
+    }
 
-            .nav {
-                flex-direction: column;
-                gap: 10px;
-            }
+    #contact h1 {
+      margin-bottom: 15px;
+      height: 30%;
+      font-size: 2rem;
+    }
 
-            .nav-items {
-                justify-content: center;
-            }
+    #contact a {
+      display: inline-block;
+      margin: 10px 15px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border: 2px solid white;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
 
-            .carousel {
-                width: 100%;
-            }
+    #contact a:hover {
+      background: white;
+      color: #0F817D;
+    }
 
-            #contact {
-                display: flex;
-                flex-wrap: nowrap;
-                gap: 100px;
-            }
+    /* Responsive Breakpoints */
+    @media (max-width: 768px) {
+      .text h1 {
+        font-size: 1.8rem;
+      }
 
-            #contact a {
-                display: flex;
-                flex-wrap: nowrap;
-                gap: 100px;
-            }
-        }
+      .hero img {
+        max-width: 320px;
+      }
 
-        @media (max-width: 360px) {
-            .text h1 {
-                font-size: 1rem;
-            }
+      .service-card {
+        max-width: 100%;
+      }
+    }
 
-            .nav-items a {
-                padding: 8px 10px;
-                font-size: 0.9rem;
-            }
+    @media (max-width: 425px) {
+      .text h1 {
+        font-size: 1.4rem;
+      }
 
-            #contact a {
-                padding: 12px 15px;
-                font-size: 0.9rem;
-                gap: 80px;
-            }
-        }
-    </style>
+      .nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-items {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="nav">
-        <div class="img">
-            <img src="https://static.vecteezy.com/system/resources/previews/011/883/276/original/modern-graphic-apple-fruit-colorful-logo-good-for-technology-logo-fruits-logo-apple-logo-nutrition-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg"
-                alt="">
-        </div>
-        <div class="nav-items">
-            <a href="#main">Home</a>
-            <a href="#about">About</a>
-            <a href="#service">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
+  <!-- Navbar -->
+  <div class="nav">
+    <div class="img">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/011/883/276/original/modern-graphic-apple-fruit-colorful-logo-good-for-technology-logo-fruits-logo-apple-logo-nutrition-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg"
+        alt="Logo">
     </div>
-
-    <div id="main">
-        <div class="text">
-            <h1>Welcome to GLL</h1>
-            <h1><span class="highlight">Safe.</span> Affordable. Hassle-Free PG Living.</h1>
-        </div>
-        <div class="hero">
-            <img src="img/IMG_5672.jpg" alt="">
-        </div>
+    <div class="nav-items">
+      <a href="#main">Home</a>
+      <a href="#about">About</a>
+      <a href="#service">Services</a>
+      <a href="#contact">Contact</a>
     </div>
-    <div id="about">
-        <div class="about-content">
-            <h1>About Us</h1>
-            <p>
-                GLL PG offers a modern, safe, and comfortable living space tailored for students and working
-                professionals.
-                Located in a prime area with easy access to public transport, shopping, and dining, our PG ensures all
-                the
-                essentials are just around the corner.
-        </div>
+  </div>
+
+  <!-- Hero -->
+  <div id="main">
+    <div class="text">
+      <h1>Welcome to <span class="highlight">GLL PG</span></h1>
+      <h1><span class="highlight">Safe.</span> Affordable. Hassle-Free Living.</h1>
     </div>
-    <div id="service">
-        <h1>Our Services</h1>
-
-        <div class="service-content">
-            <div class="it">
-                <ul>
-                    <li><i class="fas fa-bed"></i> Fully Furnished Rooms</li>
-                    <li><i class="fas fa-wifi"></i> High-Speed Wi-Fi</li>
-                    <li><i class="fas fa-utensils"></i> Hygienic Meals</li>
-                    <li><i class="fas fa-shield-alt"></i> 24/7 Security</li>
-                </ul>
-            </div>
-            <div class="its">
-                <ul>
-                    <li><i class="fa-solid fa-shirt"></i> Laundry Service</li>
-                    <li><i class="fas fa-concierge-bell"></i> 24/7 Concierge Service</li>
-                    <li><i class="fas fa-broom"></i> Daily Housekeeping</li>
-                    <li><i class="fas fa-bicycle"></i> Bicycle Rentals</li>
-                </ul>
-            </div>
-
-
-        </div>
-
+    <div class="hero">
+      <img src="img/IMG_5672.jpg" alt="Hero Image">
     </div>
-    <div class="rooms">
-        <h1>Available Comforts</h1>
-        <div class="carousel">
+  </div>
 
-            <div class="carousel-track">
-                <img src="img/IMG_5680.jpg" alt="1">
-                <img src="img/IMG_5683.jpg" alt="2">
-                <img src="img/IMG_5685.jpg" alt="3">
-                <img src="img/IMG_5686.jpg" alt="">
-                <img src="img/IMG_6087.JPG" alt="">
-                <img src="img/IMG_6088.JPG" alt="">
-                <img src="img/IMG_6089.JPG" alt="">
-                <img src="img/IMG_6093.jpg" alt="2">
-                <img src="img/IMG_6092.jpg" alt="3">
-
-            </div>
-            <button class="btn prev">&#10094;</button>
-            <button class="btn next">&#10095;</button>
-        </div>
-
+  <!-- About -->
+  <div id="about">
+    <div class="about-content">
+      <h1>About Us</h1>
+      <p>
+        GLL PG offers a modern, safe, and comfortable living space tailored for students and working professionals.
+        Located in a prime area with easy access to public transport, shopping, and dining, our PG ensures all
+        the essentials are just around the corner.
+      </p>
     </div>
-    <div id="contact">
-        <h1>Contact Us</h1>
-        <p>If you have any questions or inquiries, feel free to reach out to us!</p>
-        <a href="https://wa.me/9353563797"><i class="fa-brands fa-whatsapp"><span>WHATSAPP</span></i></a>
+  </div>
 
-        <a href="mailto:keerthikumar0103@gmail.com"><i class="fa-solid fa-envelope"><span>GMAIL</span></i></a>
-
-        <a href="tel:+9353563797"><i class="fa-solid fa-phone"><span>CALL</span></i></a>
+  <!-- Services -->
+  <div id="service">
+    <h1>Our Services</h1>
+    <div class="service-content">
+      <div class="service-card">
+        <i class="fas fa-bed"></i>
+        <h3>Fully Furnished Rooms</h3>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-wifi"></i>
+        <h3>High-Speed Wi-Fi</h3>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-utensils"></i>
+        <h3>Hygienic Meals</h3>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>24/7 Security</h3>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-shirt"></i>
+        <h3>Washing Machine</h3>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-broom"></i>
+        <h3>Daily Housekeeping</h3>
+      </div>
     </div>
+  </div>
 
-    <script>
-        const track = document.querySelector(".carousel-track");
-        const images = document.querySelectorAll(".carousel img");
-        const nextBtn = document.querySelector(".next");
-        const prevBtn = document.querySelector(".prev");
+<!-- Rooms -->
+  <div class="rooms">
+    <h1>Available Comforts</h1>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="img/IMG_5680.jpg" alt="1">
+        <img src="img/IMG_5683.jpg" alt="2">
+        <img src="img/IMG_5685.jpg" alt="3">
+        <img src="img/IMG_5686.jpg" alt="">
+        <img src="img/IMG_6087.JPG" alt="">
+        <img src="img/IMG_6088.JPG" alt="">
+        <img src="img/IMG_6089.JPG" alt="">
+        <img src="img/IMG_6093.jpg" alt="2">
+        <img src="img/IMG_6092.jpg" alt="3">
+      </div>
+      <button class="btn prev">&#10094;</button>
+      <button class="btn next">&#10095;</button>
+    </div>
+  </div>
 
-        let index = 0;
-        let autoPlay = true;
-        let interval;
+  <!-- Contact -->
+  <div id="contact">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+    <a href="https://wa.me/9353563797"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    <a href="mailto:keerthikumar0103@gmail.com"><i class="fa-solid fa-envelope"></i> Gmail</a>
+    <a href="tel:+9353563797"><i class="fa-solid fa-phone"></i> Call</a>
+  </div>
 
-        function moveCarousel() {
-            track.style.transform = `translateX(-${index * 100}%)`;
-        }
+  <script>
+    const track = document.querySelector(".carousel-track");
+    const images = document.querySelectorAll(".carousel img");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
 
-        function startAutoPlay() {
-            interval = setInterval(() => {
-                index = (index + 1) % images.length;
-                moveCarousel();
-            }, 2500);
-        }
+    let index = 0;
+    let autoPlay = true;
+    let interval;
 
-        function stopAutoPlay() {
-            clearInterval(interval);
-            autoPlay = false;
-        }
+    function moveCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
 
-        // Next/Prev button clicks
-        nextBtn.addEventListener("click", () => {
-            index = (index + 1) % images.length;
-            moveCarousel();
-        });
+    function startAutoPlay() {
+      interval = setInterval(() => {
+        index = (index + 1) % images.length;
+        moveCarousel();
+      }, 2500);
+    }
 
-        prevBtn.addEventListener("click", () => {
-            index = (index - 1 + images.length) % images.length;
-            moveCarousel();
-        });
+    function stopAutoPlay() {
+      clearInterval(interval);
+      autoPlay = false;
+    }
 
-        // Stop autoplay on image click
-        images.forEach(img => {
-            img.addEventListener("click", stopAutoPlay);
-        });
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % images.length;
+      moveCarousel();
+    });
 
-        // Start autoplay
-        if (autoPlay) startAutoPlay();
-    </script>
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + images.length) % images.length;
+      moveCarousel();
+    });
 
+    images.forEach(img => {
+      img.addEventListener("click", stopAutoPlay);
+    });
+
+    if (autoPlay) startAutoPlay();
+  </script>
 
 </body>
-
 
 </html>
