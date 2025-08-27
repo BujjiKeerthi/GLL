@@ -9,194 +9,154 @@
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-
         html {
-  scroll-padding-top: 70px; /* Matches the height of your fixed nav */
-}
+            scroll-padding-top: 70px;
+        }
 
         * {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             scroll-behavior: smooth;
-            transition: all 1s ease;
+            transition: all 0.4s ease;
             scrollbar-width: 0;
-
         }
-/* 
+
+        /* Navbar */
         .nav {
             background-color: white;
             backdrop-filter: blur(10px);
-            color: #fff;
             padding: 10px 20px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
-            z-index: 10000;
-        }
-
-        .img {
-            height: 70px;
-            width: 100%;
+            z-index: 1000;
         }
 
         .img img {
-            width: 60px;
+            width: 50px;
             height: auto;
-            align-items: center;
-            align-content: center;
             border-radius: 50%;
-
         }
 
         .nav-items {
             display: flex;
-            justify-content: space-around;
             gap: 20px;
-            align-items: center;
-
+            flex-wrap: wrap;
         }
 
         .nav-items a {
             color: black;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 15px;
+            font-size: 1rem;
             border-bottom: 2px solid transparent;
-            transition: border-bottom 0.4s ease-in-out, color 0.4s ease-in-out;
-            gap: 40px;
-
         }
 
         .nav-items a:hover {
             color: #0F817D;
             border-bottom: 2px solid #0F817D;
-
         }
 
+        /* Hero */
         #main {
             display: flex;
-            height: 100vh;
-            width: 100%;
+            flex-wrap: wrap;
+            /* stack on small screens */
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            padding: 20px;
             background-color: #F1F1F1;
-
-
         }
 
-
         .hero img {
-            position: relative;
-            width: 500px;
-            height: 500px;
-            margin-top: 40px;
-            margin-right: -40px;
-            border: 1px solid whitesmoke;
-            left: 80%;
+            width: 90%;
+            max-width: 400px;
             border-radius: 20px;
-            animation: slide 1s ease-in-out;
         }
 
         .text {
-            height: 150px;
-            position: relative;
+            flex: 1;
             text-align: center;
-            top: 30%;
-            z-index: 1;
-            line-height: 75px;
-            animation: slide 1s ease-in-out;
-            overflow: hidden;
+            padding: 20px;
+        }
 
+        .text h1 {
+            font-size: 2rem;
+            line-height: 1.4;
         }
 
         .highlight {
             color: #0F817D;
         }
 
-        @keyframes slide {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
+        /* About */
         #about {
-            /* padding: 100px 20px;
-            background-color: #fff;
+            padding: 50px 20px;
             text-align: center;
-            align-content: center;
-            height: 50vh;
-
         }
 
-        #service h1 {
-            font-size: 32px;
-            color: #0F817D;
-            line-height: 100px;
+        #about h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
 
         .about-content p {
-            line-height: 40px;
+            line-height: 1.6;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
+            font-size: 1rem;
         }
 
+        /* Services */
         #service {
             background-color: #81B1AE;
             text-align: center;
             padding: 50px 20px;
+            color: white;
+        }
+
+        #service h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
         }
 
         .service-content {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .it {
-            color: #EBEBEB;
-            text-align: justify;
-            line-height: 30px;
-
-
-        }
-
-        .it ul {
-            list-style-type: none;
-        }
-
+        .it,
         .its {
-            position: relative;
-            bottom: 10px;
-            color: #EBEBEB;
-            text-align: justify;
-            line-height: 30px;
-
-
+            flex: 1 1 250px;
+            text-align: left;
         }
 
+        .it ul,
         .its ul {
             list-style-type: none;
+            padding-left: 0;
         }
 
-        .its img {
-            width: 30px;
-            height: auto;
-            position: relative;
-            top: 10px;
-
+        /* Carousel */
+        .rooms h1 {
+            text-align: center;
+            color: #0F817D;
+            margin: 50px 0 20px;
         }
 
         .carousel {
-            width: 80%;
+            width: 95%;
             max-width: 800px;
-            margin: 50px auto;
+            margin: 0 auto 50px;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             position: relative;
         }
 
@@ -207,12 +167,11 @@
 
         .carousel img {
             width: 100%;
-            height: 50vh;
+            height: auto;
+            object-fit: cover;
             flex-shrink: 0;
-            cursor: pointer;
         }
 
-        /* Buttons 
         .btn {
             position: absolute;
             top: 50%;
@@ -227,7 +186,6 @@
 
         .btn:hover {
             background: rgba(0, 0, 0, 0.7);
-
         }
 
         .prev {
@@ -238,289 +196,90 @@
             right: 10px;
         }
 
-        .rooms h1 {
-            text-align: center;
-            color: #0F817D;
-            line-height: 100px;
-        }
-        #contact{
+        /* Contact */
+        #contact {
             background-color: #78b8b6;
-            height: 50vh;
+            padding: 40px 20px;
             color: white;
-            align-content: center;
             text-align: center;
         }
-        #contact a{
-            line-height: 30px;
-            margin: 0 60px;
+
+        #contact a {
+            display: inline-block;
+            margin: 10px 20px;
             text-decoration: none;
             color: white;
-            font-family: sans-serif;
-
-        } */
-
-    html {
-        scroll-padding-top: 70px;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        scroll-behavior: smooth;
-        transition: all 0.4s ease;
-    }
-
-    /* Navbar */
-    .nav {
-        background-color: white;
-        backdrop-filter: blur(10px);
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .img img {
-        width: 50px;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    .nav-items {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .nav-items a {
-        color: black;
-        text-decoration: none;
-        padding: 10px 15px;
-        font-size: 1rem;
-        border-bottom: 2px solid transparent;
-    }
-
-    .nav-items a:hover {
-        color: #0F817D;
-        border-bottom: 2px solid #0F817D;
-    }
-
-    /* Hero */
-    #main {
-        display: flex;
-        flex-wrap: wrap; /* stack on small screens */
-        justify-content: center;
-        align-items: center;
-        min-height: 90vh;
-        padding: 20px;
-        background-color: #F1F1F1;
-    }
-
-    .hero img {
-        width: 90%;
-        max-width: 400px;
-        border-radius: 20px;
-    }
-
-    .text {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .text h1 {
-        font-size: 2rem;
-        line-height: 1.4;
-    }
-
-    .highlight {
-        color: #0F817D;
-    }
-
-    /* About */
-    #about {
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    #about h1 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-
-    .about-content p {
-        line-height: 1.6;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 1rem;
-    }
-
-    /* Services */
-    #service {
-        background-color: #81B1AE;
-        text-align: center;
-        padding: 50px 20px;
-        color: white;
-    }
-
-    #service h1 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-
-    .service-content {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .it, .its {
-        flex: 1 1 250px;
-        text-align: left;
-    }
-
-    .it ul, .its ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    /* Carousel */
-    .rooms h1 {
-        text-align: center;
-        color: #0F817D;
-        margin: 50px 0 20px;
-    }
-
-    .carousel {
-        width: 95%;
-        max-width: 800px;
-        margin: 0 auto 50px;
-        overflow: hidden;
-        border-radius: 12px;
-        position: relative;
-    }
-
-    .carousel-track {
-        display: flex;
-        transition: transform 0.6s ease-in-out;
-    }
-
-    .carousel img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        flex-shrink: 0;
-    }
-
-    .btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 50%;
-    }
-
-    .btn:hover {
-        background: rgba(0, 0, 0, 0.7);
-    }
-
-    .prev {
-        left: 10px;
-    }
-
-    .next {
-        right: 10px;
-    }
-
-    /* Contact */
-    #contact {
-        background-color: #78b8b6;
-        padding: 40px 20px;
-        color: white;
-        text-align: center;
-    }
-
-    #contact a {
-        display: inline-block;
-        margin: 10px 20px;
-        text-decoration: none;
-        color: white;
-        font-size: 1rem;
-    }
-
-    /* ✅ Responsive Breakpoints */
-    @media (max-width: 768px) {
-        .text h1 {
-            font-size: 1.5rem;
-        }
-
-        .nav-items {
-            gap: 10px;
-        }
-
-        .hero img {
-            max-width: 300px;
-        }
-
-        #service h1, .rooms h1 {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media (max-width: 425px) {
-        .text h1 {
-            font-size: 1.2rem;
-        }
-
-        .nav {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .nav-items {
-            justify-content: center;
-        }
-
-        .carousel {
-            width: 100%;
-        }
-        #contact {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 100px;
-}
-
-        #contact a{
-    display: flex;
-            flex-wrap: nowrap;
-            gap: 100px;
-        }
-    }
-    @media (max-width: 360px) {
-        .text h1 {
             font-size: 1rem;
         }
 
-        .nav-items a {
-            padding: 8px 10px;
-            font-size: 0.9rem;
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .text h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-items {
+                gap: 10px;
+            }
+
+            .hero img {
+                max-width: 300px;
+            }
+
+            #service h1,
+            .rooms h1 {
+                font-size: 1.5rem;
+            }
         }
-        #contact a{
-            padding: 12px 15px;
-            font-size: 0.9rem;
-            gap: 80px;
+
+        @media (max-width: 425px) {
+            .text h1 {
+                font-size: 1.2rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-items {
+                justify-content: center;
+            }
+
+            .carousel {
+                width: 100%;
+            }
+
+            #contact {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 100px;
+            }
+
+            #contact a {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 100px;
+            }
         }
-    } </style>
+
+        @media (max-width: 360px) {
+            .text h1 {
+                font-size: 1rem;
+            }
+
+            .nav-items a {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+
+            #contact a {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+                gap: 80px;
+            }
+        }
+    </style>
 </head>
 
 <body>
