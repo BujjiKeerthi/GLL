@@ -1,459 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GLL PG</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Best PG in Bangalore | Safe & Affordable Boys/Girls PG – GLL PG</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="GLL PG is a safe, affordable PG in Bangalore for students and working professionals. Fully furnished rooms, high-speed Wi-Fi, hygienic meals, 24/7 security, washing machine, and daily housekeeping in a prime location." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Best PG in Bangalore – GLL PG" />
+  <meta property="og:description" content="Safe, affordable, and hassle-free PG accommodation in Bangalore with fully furnished rooms, Wi-Fi, meals, and security." />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="https://yourdomain.com/img/hero-gll-pg-bangalore.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Best PG in Bangalore – GLL PG" />
+  <meta name="twitter:description" content="Safe, affordable PG for students & professionals in Bangalore. Furnished rooms, Wi-Fi, meals, 24/7 security." />
+  <meta name="twitter:image" content="https://yourdomain.com/img/hero-gll-pg-bangalore.jpg" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
-    *{
-        scrollbar-width: 0px;
-        scroll-behavior:smooth;
-    }
-    html {
-      scroll-padding-top: 70px;
-      scroll-behavior: smooth;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #f8f9fa;
-      color: #333;
-    }
+    *{ scrollbar-width:0px; scroll-behavior:smooth; }
+    html{ scroll-padding-top:70px; scroll-behavior:smooth; }
+    *{ margin:0; padding:0; font-family:"Segoe UI", Arial, sans-serif; box-sizing:border-box; }
+    body{ background:#f8f9fa; color:#333; }
 
     /* Navbar */
-    .nav {
-      background-color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .img img {
-      width: 55px;
-      border-radius: 50%;
-    }
-
-    .nav-items {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .nav-items a {
-      color: #333;
-      text-decoration: none;
-      padding: 10px 15px;
-      font-size: 1rem;
-      font-weight: 500;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .nav-items a:hover {
-      color: #0F817D;
-    }
+    .nav{ background:#fff; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+    .img img{ width:55px; height:55px; border-radius:50%; object-fit:cover; }
+    .nav-items{ display:flex; gap:20px; flex-wrap:wrap; }
+    .nav-items a{ color:#333; text-decoration:none; padding:10px 15px; font-size:1rem; font-weight:500; border-radius:6px; transition:.3s; }
+    .nav-items a:hover{ color:#0F817D; }
 
     /* Hero */
-    #main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      min-height: 90vh;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #e3fdfd, #ffffff);
-    }
-
-    .hero {
-      position: relative;
-      display: inline-block;
-    }
-
-    .hero img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
-      /* border: 6px solid #0072ff; */
-      object-fit: cover;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Glow Animation */
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      box-shadow: 0 0 25px #00c6ff, 0 0 50px #0072ff;
-      animation: glow 2s infinite alternate;
-      z-index: -1;
-    }
-
-    @keyframes glow {
-      from {
-        box-shadow: 0 0 20px #00c6ff, 0 0 40px #0072ff;
-      }
-
-      to {
-        box-shadow: 0 0 40px #00c6ff, 0 0 80px #0072ff;
-      }
-    }
-
-    .text {
-      flex: 1;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .text h1 {
-      font-size: 2.5rem;
-      line-height: 1.4;
-    }
-
-    .highlight {
-      color: #0F817D;
-      font-weight: bold;
-    }
+    #main{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; min-height:90vh; padding:40px 20px; background:linear-gradient(135deg,#e3fdfd,#ffffff); }
+    .hero{ position:relative; display:inline-block; }
+    .hero img{ width:100%; max-width:400px; border-radius:20px; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,.3); }
+    .hero::after{ content:""; position:absolute; inset:0; border-radius:20px; box-shadow:0 0 25px #00c6ff, 0 0 50px #0072ff; animation:glow 2s infinite alternate; z-index:-1; }
+    @keyframes glow{ from{ box-shadow:0 0 20px #00c6ff, 0 0 40px #0072ff; } to{ box-shadow:0 0 40px #00c6ff, 0 0 80px #0072ff; } }
+    .text{ flex:1; text-align:center; padding:20px; }
+    .text h1{ font-size:2.5rem; line-height:1.4; }
+    .highlight{ color:#0F817D; font-weight:bold; }
+    .kicker{ margin-top:12px; font-size:1.05rem; color:#333; }
 
     /* About */
-    #about {
-      padding: 60px 20px;
-      text-align: center;
-      background: #fff;
-    }
-
-    #about h1 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: #0F817D;
-    }
-
-    .about-content p {
-      line-height: 1.8;
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
+    #about{ padding:60px 20px; text-align:center; background:#fff; }
+    #about h2{ font-size:2rem; margin-bottom:15px; color:#0F817D; }
+    .about-content p{ line-height:1.8; max-width:900px; margin:0 auto; font-size:1.08rem; }
 
     /* Services */
-    #service {
-      background-color: #0F817D;
-      text-align: center;
-      padding: 60px 20px;
-      color: white;
-    }
-
-    #service h1 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .service-content {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
-
-    .service-card {
-      background: white;
-      color: #333;
-      padding: 25px;
-      border-radius: 15px;
-      flex: 1 1 250px;
-      max-width: 300px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-    }
-
-    .service-card i {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: #0F817D;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-    }
+    #service{ background:#0F817D; text-align:center; padding:60px 20px; color:#fff; }
+    #service h2{ font-size:2rem; margin-bottom:30px; }
+    .service-content{ display:flex; justify-content:center; flex-wrap:wrap; gap:25px; }
+    .service-card{ background:#fff; color:#333; padding:25px; border-radius:15px; flex:1 1 250px; max-width:300px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,.1); transition:transform .3s; }
+    .service-card i{ font-size:2rem; margin-bottom:15px; color:#0F817D; }
+    .service-card:hover{ transform:translateY(-8px); }
 
     /* Carousel */
-    .rooms {
-      padding: 60px 20px;
-    }
-
-    .rooms h1 {
-      text-align: center;
-      color: #0F817D;
-      margin-bottom: 25px;
-      font-size: 2rem;
-    }
-
-    .carousel {
-      width: 95%;
-      max-width: 800px;
-      height: 30%;
-      margin: 0 auto 50px;
-      overflow: hidden;
-      border-radius: 15px;
-      position: relative;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-.carousel-track {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .carousel img {
-      width: 100%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 50%;
-      font-size: 1.2rem;
-    }
-
-    .btn:hover {
-      background: rgba(0, 0, 0, 0.85);
-    }
-
-    .prev {
-      left: 12px;
-    }
-
-    .next {
-      right: 12px;
-    }
+    .rooms{ padding:60px 20px; }
+    .rooms h2{ text-align:center; color:#0F817D; margin-bottom:25px; font-size:2rem; }
+    .carousel{ width:95%; max-width:800px; margin:0 auto 50px; overflow:hidden; border-radius:15px; position:relative; box-shadow:0 6px 20px rgba(0,0,0,.2); }
+    .carousel-track{ display:flex; transition:transform .6s ease-in-out; }
+    .carousel img{ width:100%; object-fit:cover; flex-shrink:0; }
+    .btn{ position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,.6); color:#fff; border:none; padding:10px 15px; cursor:pointer; border-radius:50%; font-size:1.2rem; }
+    .btn:hover{ background:rgba(0,0,0,.85); }
+    .prev{ left:12px; }
+    .next{ right:12px; }
 
     /* Contact */
-    #contact {
-      background: #0F817D;
-      padding: 60px 20px;
-      color: white;
-      text-align: center;
+    #contact{ background:#0F817D; padding:60px 20px; color:#fff; text-align:center; }
+    #contact h2{ margin-bottom:15px; font-size:2rem; }
+    #contact a{ display:inline-block; margin:10px 15px; text-decoration:none; color:#fff; font-size:1.1rem; padding:12px 20px; border:2px solid #fff; border-radius:30px; transition:.3s; }
+    #contact a:hover{ background:#fff; color:#0F817D; }
+    .address{ margin-top:16px; font-size:1rem; line-height:1.6; opacity:.95; }
+
+    /* FAQ */
+    .faq{ background:#fff; padding:40px 20px; }
+    .faq h2{ text-align:center; color:#0F817D; margin-bottom:20px; font-size:2rem; }
+    details{ max-width:900px; margin:10px auto; background:#f5f8f9; border:1px solid #e3ecec; border-radius:12px; padding:14px 18px; }
+    summary{ cursor:pointer; font-weight:600; }
+    details p{ margin-top:10px; line-height:1.7; }
+
+    /* Breadcrumb (for SEO semantics) */
+    .breadcrumb{ display:flex; gap:6px; justify-content:center; align-items:center; font-size:.95rem; margin-top:8px; color:#4d6664; }
+    .breadcrumb a{ color:#0F817D; text-decoration:none; }
+    .breadcrumb span{ opacity:.8; }
+
+    /* Responsive */
+    @media (max-width:768px){
+      .text h1{ font-size:1.8rem; }
+      .hero img{ max-width:320px; }
+      .service-card{ max-width:100%; }
     }
-
-    #contact h1 {
-      margin-bottom: 15px;
-      height: 30%;
-      font-size: 2rem;
-    }
-
-    #contact a {
-      display: inline-block;
-      margin: 10px 15px;
-      text-decoration: none;
-      color: white;
-      font-size: 1.1rem;
-      padding: 12px 20px;
-      border: 2px solid white;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
-
-    #contact a:hover {
-      background: white;
-      color: #0F817D;
-    }
-
-    /* Responsive Breakpoints */
-    @media (max-width: 768px) {
-      .text h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero img {
-        max-width: 320px;
-      }
-
-      .service-card {
-        max-width: 100%;
-      }
-    }
-
-    @media (max-width: 425px) {
-      .text h1 {
-        font-size: 1.4rem;
-      }
-
-      .nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-items {
-        justify-content: center;
-      }
+    @media (max-width:425px){
+      .text h1{ font-size:1.4rem; }
+      .nav{ flex-direction:column; gap:12px; }
+      .nav-items{ justify-content:center; }
     }
   </style>
 </head>
 
 <body>
   <!-- Navbar -->
-  <div class="nav">
+  <nav class="nav" aria-label="Primary">
     <div class="img">
-      <img
-        src="https://static.vecteezy.com/system/resources/previews/011/883/276/original/modern-graphic-apple-fruit-colorful-logo-good-for-technology-logo-fruits-logo-apple-logo-nutrition-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg"
-        alt="Logo">
+      <a href="#main" aria-label="GLL PG Home">
+        <img src="https://static.vecteezy.com/system/resources/previews/011/883/276/original/modern-graphic-apple-fruit-colorful-logo-good-for-technology-logo-fruits-logo-apple-logo-nutrition-logo-company-logo-dummy-logo-bussiness-logo-vector.jpg"
+             alt="GLL PG logo" width="55" height="55" decoding="async" />
+      </a>
     </div>
-    <div class="nav-items">
-      <a href="#main">Home</a>
-      <a href="#about">About</a>
-      <a href="#service">Services</a>
-      <a href="#contact">Contact</a>
+    <div class="nav-items" role="menubar">
+      <a role="menuitem" href="#main">Home</a>
+      <a role="menuitem" href="#about">About</a>
+      <a role="menuitem" href="#service">Services</a>
+      <a role="menuitem" href="#rooms">Rooms</a>
+      <a role="menuitem" href="#contact">Contact</a>
     </div>
-  </div>
+  </nav>
 
   <!-- Hero -->
-  <div id="main">
+  <header id="main">
     <div class="text">
-      <h1>Welcome to <span class="highlight">GLL PG</span></h1>
-      <h1><span class="highlight">Safe.</span> Affordable. Hassle-Free Living.</h1>
+      <h1>Best <span class="highlight">PG in Bangalore</span> – GLL PG</h1>
+      <p class="kicker">Safe, affordable & hassle-free living for students and working professionals near prime Bangalore locations.</p>
     </div>
-    <div class="hero">
-      <img src="img/IMG_5672.jpg" alt="Hero Image">
+    <div class="hero" aria-label="PG in Bangalore hero image">
+      <!-- Keep your image path; rename if you like -->
+      <img src="img/IMG_5672.jpg"
+           alt="GLL PG in Bangalore – furnished rooms with cozy interiors"
+           width="800" height="1000" loading="eager" decoding="async" />
     </div>
-  </div>
+  </header>
+
+  <!-- Breadcrumb (semantic, unobtrusive) -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="#rooms">Rooms</a> <span>›</span>
+    <span>Best PG in Bangalore</span>
+  </nav>
 
   <!-- About -->
-  <div id="about">
+  <section id="about" aria-labelledby="about-title">
     <div class="about-content">
-      <h1>About Us</h1>
+      <h2 id="about-title">About GLL PG – Bangalore</h2>
       <p>
-        GLL PG offers a modern, safe, and comfortable living space tailored for students and working professionals.
-        Located in a prime area with easy access to public transport, shopping, and dining, our PG ensures all
-        the essentials are just around the corner.
+        Looking for a <strong>PG in Bangalore</strong> that balances comfort, safety, and affordability?
+        <strong>GLL PG</strong> is designed for <em>students</em> and <em>working professionals</em> who want a
+        clean, well-managed space with everything included—fully furnished rooms, <strong>high-speed Wi-Fi</strong>,
+        <strong>hygienic meals</strong>, <strong>24/7 security</strong>, <strong>washing machine</strong>, and
+        <strong>daily housekeeping</strong>. Our location offers easy access to public transport, tech parks,
+        colleges, shopping and dining—making everyday living smooth and convenient.
+      </p>
+      <p style="margin-top:12px;">
+        Whether you need a <strong>boys PG in Bangalore</strong>, <strong>girls PG</strong>, or a <strong>co-living
+        PG near prime areas</strong>, GLL PG provides flexible options with transparent pricing and responsive support.
       </p>
     </div>
-  </div>
+  </section>
 
   <!-- Services -->
-  <div id="service">
-    <h1>Our Services</h1>
+  <section id="service" aria-labelledby="services-title">
+    <h2 id="services-title">Our Services & Amenities</h2>
     <div class="service-content">
-      <div class="service-card">
-        <i class="fas fa-bed"></i>
+      <article class="service-card" aria-label="Fully Furnished Rooms">
+        <i class="fas fa-bed" aria-hidden="true"></i>
         <h3>Fully Furnished Rooms</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-wifi"></i>
+        <p>Comfortable beds, storage, study desk & bright lighting.</p>
+      </article>
+      <article class="service-card" aria-label="High-Speed Wi-Fi">
+        <i class="fas fa-wifi" aria-hidden="true"></i>
         <h3>High-Speed Wi-Fi</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-utensils"></i>
+        <p>Reliable internet for study, work, and streaming.</p>
+      </article>
+      <article class="service-card" aria-label="Hygienic Meals">
+        <i class="fas fa-utensils" aria-hidden="true"></i>
         <h3>Hygienic Meals</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-shield-alt"></i>
+        <p>Fresh, balanced and home-style food options.</p>
+      </article>
+      <article class="service-card" aria-label="24/7 Security">
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
         <h3>24/7 Security</h3>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-shirt"></i>
+        <p>CCTV, secure entry, and on-site support.</p>
+      </article>
+      <article class="service-card" aria-label="Washing Machine">
+        <i class="fa-solid fa-shirt" aria-hidden="true"></i>
         <h3>Washing Machine</h3>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-broom"></i>
+        <p>On-premise laundry for convenience.</p>
+      </article>
+      <article class="service-card" aria-label="Daily Housekeeping">
+        <i class="fas fa-broom" aria-hidden="true"></i>
         <h3>Daily Housekeeping</h3>
-      </div>
+        <p>Clean rooms and common areas, everyday.</p>
+      </article>
     </div>
-  </div>
+  </section>
 
-<!-- Rooms -->
-  <div class="rooms">
-    <h1>Available Comforts</h1>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="img/IMG_5680.jpg" alt="1">
-        <img src="img/IMG_5683.jpg" alt="2">
-        <img src="img/IMG_5685.jpg" alt="3">
-        <img src="img/IMG_5686.jpg" alt="">
-        <img src="img/IMG_6087.JPG" alt="">
-        <img src="img/IMG_6088.JPG" alt="">
-        <img src="img/IMG_6089.JPG" alt="">
-        <img src="img/IMG_6093.jpg" alt="2">
-        <img src="img/IMG_6092.jpg" alt="3">
+  <!-- Rooms / Carousel -->
+  <section class="rooms" id="rooms" aria-labelledby="rooms-title">
+    <h2 id="rooms-title">Available Comforts</h2>
+    <div class="carousel" role="region" aria-roledescription="carousel" aria-label="PG rooms gallery">
+      <div class="carousel-track" aria-live="polite">
+        <!-- You can keep your original filenames; descriptive alt helps SEO -->
+        <img src="img/IMG_5680.jpg" alt="Bangalore PG room with wardrobe and study desk" loading="lazy" decoding="async" />
+        <img src="img/IMG_5683.jpg" alt="Furnished PG room with natural light" loading="lazy" decoding="async" />
+        <img src="img/IMG_5685.jpg" alt="Cozy PG bed with clean linens" loading="lazy" decoding="async" />
+        <img src="img/IMG_5686.jpg" alt="Neat PG room interior in Bangalore" loading="lazy" decoding="async" />
+        <img src="img/IMG_6087.JPG" alt="Dining area with hygienic meals" loading="lazy" decoding="async" />
+        <img src="img/IMG_6088.JPG" alt="Common area for students and professionals" loading="lazy" decoding="async" />
+        <img src="img/IMG_6089.JPG" alt="Laundry and washing machine facility" loading="lazy" decoding="async" />
+        <img src="img/IMG_6093.jpg" alt="Wi-Fi enabled study corner in PG" loading="lazy" decoding="async" />
+        <img src="img/IMG_6092.jpg" alt="Well-maintained corridors and security" loading="lazy" decoding="async" />
       </div>
-      <button class="btn prev">&#10094;</button>
-      <button class="btn next">&#10095;</button>
+      <button class="btn prev" aria-label="Previous image" type="button">&#10094;</button>
+      <button class="btn next" aria-label="Next image" type="button">&#10095;</button>
     </div>
-  </div>
+  </section>
 
-  <!-- Contact -->
-  <div id="contact">
-    <h1>Contact Us</h1>
-    <p>If you have any questions or inquiries, feel free to reach out to us!</p>
-    <a href="https://wa.me/9353563797"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-    <a href="mailto:keerthikumar0103@gmail.com"><i class="fa-solid fa-envelope"></i> Gmail</a>
-    <a href="tel:+9353563797"><i class="fa-solid fa-phone"></i> Call</a>
-  </div>
+  <!-- FAQ (helps long-tail SEO + Rich Results) -->
+  <section class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Frequently Asked Questions</h2>
+    <details>
+      <summary>Is GLL PG suitable for students and working professionals?</summary>
+      <p>Yes. We host both students and working professionals with quiet hours, study-friendly rooms, and reliable Wi-Fi.</p>
+    </details>
+    <details>
+      <summary>What facilities are included in the rent?</summary>
+      <p>Furnished rooms, Wi-Fi, hygienic meals, 24/7 security, washing machine access, and daily housekeeping.</p>
+    </details>
+    <details>
+      <summary>Is the location well connected?</summary>
+      <p>We are close to bus stops, metro connectivity, tech parks, colleges, and daily needs like supermarkets and eateries.</p>
+    </details>
+  </section>
 
-  <script>
-    const track = document.querySelector(".carousel-track");
-    const images = document.querySelectorAll(".carousel img");
-    const nextBtn = document.querySelector(".next");
-    const prevBtn = document.querySelector(".prev");
+  <!-- Contact / Local SEO -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact Us</h2>
+    <p>If you have any questions or would like to book a visit, reach out to us!</p>
+    <p class="address">
+      <strong>GLL PG</strong><br />
+      4th Cross, Example Layout, Bangalore, Karnataka 560001, India<br />
+      📞 <a href="tel:+919353563797" style="color:#fff; text-decoration:underline;">+91 9353563797</a><br />
+      ✉️ <a href="mailto:keerthikumar0103@gmail.com" style="color:#fff; text-decoration:underline;">keerthikumar0103@gmail.com</a>
+    </p>
+    <div style="margin-top:12px;">
+      <a href="https://wa.me/9353563797" aria-label="WhatsApp GLL PG"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="mailto:keerthikumar0103@gmail.com" aria-label="Email GLL PG"><i class="fa-solid fa-envelope"></i> Gmail</a>
+      <a href="tel:+919353563797" aria-label="Call GLL PG"><i class="fa-solid fa-phone"></i> Call</a>
+    </div>
+  </section>
 
-    let index = 0;
-    let autoPlay = true;
-    let interval;
-
-    function moveCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function startAutoPlay() {
-      interval = setInterval(() => {
-        index = (index + 1) % images.length;
-        moveCarousel();
-      }, 2500);
-    }
-
-    function stopAutoPlay() {
-      clearInterval(interval);
-      autoPlay = false;
-    }
-
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % images.length;
-      moveCarousel();
-    });
-
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + images.length) % images.length;
-      moveCarousel();
-    });
-
-    images.forEach(img => {
-      img.addEventListener("click", stopAutoPlay);
-    });
-
-    if (autoPlay) startAutoPlay();
+  <!-- JSON-LD: Local Business + LodgingBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness","LodgingBusiness"],
+    "name": "GLL PG",
+    "description": "Safe, affordable PG in Bangalore with furnished rooms, Wi-Fi, hygienic meals, 24/7 security, washing machine, and daily housekeeping.",
+    "image": "https://yourdomain.com/img/hero-gll-pg-bangalore.jpg",
+    "url": "https://yourdomain.com/",
+    "telephone": "+919353563797",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4th Cross, Example Layout",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "postalCode": "560001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "amenityFeature": [
+      {"@type":"LocationFeatureSpecification","name":"High-speed Wi-Fi","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Hygienic Meals","value":true},
+      {"@type":"LocationFeatureSpecification","name":"24/7 Security","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Washing Machine","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Daily Housekeeping","value":true}
+    ],
+    "sameAs": [
+      "https://www.facebook.com/yourpage",
+      "https://www.instagram.com/yourpage"
+    ]
+  }
   </script>
 
-</body>
+  <!-- JSON-LD: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Is GLL PG suitable for students and working professionals?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. We host both students and working professionals with quiet hours, study-friendly rooms, and reliable Wi-Fi."}
+      },
+      {
+        "@type":"Question",
+        "name":"What facilities are included in the rent?",
+        "acceptedAnswer":{"@type":"Answer","text":"Furnished rooms, Wi-Fi, hygienic meals, 24/7 security, washing machine access, and daily housekeeping."}
+      },
+      {
+        "@type":"Question",
+        "name":"Is the location well connected?",
+        "acceptedAnswer":{"@type":"Answer","text":"We are close to bus stops, metro connectivity, tech parks, colleges, and daily needs like supermarkets and eateries."}
+      }
+    ]
+  }
+  </script>
 
+  <!-- Carousel JS (deferred) -->
+  <script defer>
+    (function(){
+      const track = document.querySelector(".carousel-track");
+      const images = document.querySelectorAll(".carousel img");
+      const nextBtn = document.querySelector(".next");
+      const prevBtn = document.querySelector(".prev");
+
+      let index = 0;
+      let autoPlay = true;
+      let interval;
+
+      function moveCarousel(){
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+      function startAutoPlay(){
+        interval = setInterval(() => {
+          index = (index + 1) % images.length;
+          moveCarousel();
+        }, 2500);
+      }
+      function stopAutoPlay(){
+        clearInterval(interval);
+        autoPlay = false;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        moveCarousel();
+      });
+      prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        moveCarousel();
+      });
+
+      images.forEach(img => img.addEventListener("click", stopAutoPlay));
+
+      if(autoPlay) startAutoPlay();
+    })();
+  </script>
+</body>
 </html>
